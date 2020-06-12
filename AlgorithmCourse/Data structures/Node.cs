@@ -9,14 +9,5 @@
         {
             this.value = node;
         }
-
-        public void Next(Node<T> node)
-        {
-            if (this.next == null)
-                this.next = node;
-            else
-                this.Next(node);
-                
-        }
     }
 }

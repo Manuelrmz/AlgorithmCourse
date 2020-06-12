@@ -1,4 +1,6 @@
-﻿namespace AlgorithmCourse.Data_structures
+﻿using System;
+
+namespace AlgorithmCourse.Data_structures
 {
     //Last In First Out
     public class Stack<T>
@@ -30,6 +32,23 @@
         public bool IsEmpty()
         {
             return top == null;
+        }
+
+        public void PrintStack()
+        {
+            if (top != null)
+            {
+                var item = top;
+                Console.WriteLine("First Value");
+                while (item != null)
+                {
+                    Console.WriteLine($"Value: {item.value}");
+                    item = item.next;
+                }
+                Console.WriteLine("Last Value");
+            }
+            else
+                Console.WriteLine("Empty Queue");
         }
     }
 }

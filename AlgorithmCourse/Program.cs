@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmCourse.Data_structures;
+using System;
 /* 
  * Topics:
  * Time / Space Complexity
@@ -33,7 +34,48 @@ namespace AlgorithmCourse
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Queue
+            /*
+            Queue<int> myQueue = new Queue<int>();
+            myQueue.PrintQueue();
+            myQueue.Add(1);
+            myQueue.Add(2);
+            myQueue.Add(3);
+            myQueue.Add(4);
+            myQueue.Add(5);
+            myQueue.PrintQueue();
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Remove()}");
+            myQueue.PrintQueue();
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Remove()}");
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Remove()}");
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Remove()}");
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Remove()}");
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Remove()}");
+            myQueue.PrintQueue();
+            myQueue.Add(1);
+            myQueue.PrintQueue();
+            System.Console.ReadLine();
+            */
+            //Stack
+            Stack<int> myQueue = new Stack<int>();
+            myQueue.PrintStack();
+            myQueue.Push(1);
+            myQueue.Push(2);
+            myQueue.Push(3);
+            myQueue.Push(4);
+            myQueue.Push(5);
+            myQueue.PrintStack();
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Pop()}");
+            myQueue.PrintStack();
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Pop()}");
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Pop()}");
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Pop()}");
+            System.Console.WriteLine($"Item Extracted: {myQueue.Peek()}");
+            System.Console.WriteLine($"ItemRemoved: {myQueue.Pop()}");
+            myQueue.PrintStack();
+            myQueue.Push(1);
+            myQueue.PrintStack();
+            System.Console.ReadLine();
         }
     }
 }

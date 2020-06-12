@@ -1,18 +1,27 @@
-﻿namespace AlgorithmCourse.Data_structures
+﻿using System;
+
+namespace AlgorithmCourse.Data_structures
 {
     //First in First Out
     public class Queue<T>
     {
         private Node<T> top;
-        
+        private Node<T> last;
+
         public void Add(T item)
         {
-            if(top == null)
+            Node<T> newItem = new Node<T>(item);
+            if (top == null)
             {
-                top = new Node<T>(item);
+                top = newItem;
+                last = top;
             }
             else
-                top.Next(new Node<T>(item));
+            {
+                last.next = newItem;
+                last = last.next;
+            }
+
         }
 
         public T Remove()
@@ -35,5 +44,23 @@
         {
             return top == null;
         }
+
+        public void PrintQueue()
+        {
+            if (top != null)
+            {
+                var item = top;
+                Console.WriteLine("First Value");
+                while (item != null)
+                {
+                    Console.WriteLine($"Value: {item.value}");
+                    item = item.next;
+                }
+                Console.WriteLine("Last Value");
+            }
+            else
+                Console.WriteLine("Empty Queue");
+        }
+
     }
 }
