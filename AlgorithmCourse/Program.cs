@@ -1,4 +1,5 @@
-﻿using AlgorithmCourse.Data_structures;
+﻿using AlgorithmCourse.Algorithms;
+using AlgorithmCourse.Data_structures;
 using System;
 /* 
  * Topics:
@@ -57,7 +58,7 @@ namespace AlgorithmCourse
             System.Console.ReadLine();
             */
             //Stack
-            Stack<int> myQueue = new Stack<int>();
+            /*Stack<int> myQueue = new Stack<int>();
             myQueue.PrintStack();
             myQueue.Push(1);
             myQueue.Push(2);
@@ -75,7 +76,14 @@ namespace AlgorithmCourse
             myQueue.PrintStack();
             myQueue.Push(1);
             myQueue.PrintStack();
-            System.Console.ReadLine();
+            System.Console.ReadLine();*/
+            int[] example = new int[]
+            {
+                9,8,7,6,5,4,3,2,1
+            };
+            MergeSort ms = new MergeSort();
+            var result = ms.Sort(example, 0, example.Length - 1);
+            Console.WriteLine(result);
         }
     }
 }
