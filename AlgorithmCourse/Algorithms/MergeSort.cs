@@ -6,6 +6,10 @@ namespace AlgorithmCourse.Algorithms
 {
     public class MergeSort
     {
+        public int[] Sort(int[] inputArray)
+        {
+            return Sort(inputArray, 0, inputArray.Length - 1);
+        }
         public int[] Sort(int[] inputArray, int start, int end)
         {
             if(end - start == 0)
@@ -20,8 +24,8 @@ namespace AlgorithmCourse.Algorithms
                     return new int[] { inputArray[start], inputArray[end] };
                 else return inputArray;
             }
-            int middle = (end - start) / 2;
-            return Merge(Sort(inputArray, start, middle), Sort(inputArray, middle + 1, end));
+            int middle = (end + start) / 2;
+            return Merge(Sort(inputArray, start, middle) , Sort(inputArray, middle + 1, end));
         }
         private int[] Merge(int [] a1, int[] a2)
         {

@@ -77,13 +77,39 @@ namespace AlgorithmCourse
             myQueue.Push(1);
             myQueue.PrintStack();
             System.Console.ReadLine();*/
+
+            /*int values = 100000;
+            int[] example = new int[values];
+            var watch = new System.Diagnostics.Stopwatch();
+            Random random = new Random();
+            Console.WriteLine("Genereting values: ");
+            watch.Start();
+            for(int i = 0; i < values; i++)
+            {
+                example[i] = random.Next(1, values);
+            }
+            watch.Stop();
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
+            MergeSort ms = new MergeSort();
+            BubbleSort bs = new BubbleSort();
+            watch.Reset();
+            watch.Start();
+            var result = ms.Sort(example);
+            watch.Stop();
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
+            watch.Reset();
+            watch.Start();
+            var result2 = bs.Sort(example);
+            watch.Stop();
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");*/
+
             int[] example = new int[]
             {
-                9,8,7,6,5,4,3,2,1
+                20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1
             };
-            MergeSort ms = new MergeSort();
-            var result = ms.Sort(example, 0, example.Length - 1);
-            Console.WriteLine(result);
+            QuickSort qs = new QuickSort();
+            var result = qs.Sort(example);
+            Console.ReadLine();
         }
     }
 }
