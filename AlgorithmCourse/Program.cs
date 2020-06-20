@@ -102,13 +102,20 @@ namespace AlgorithmCourse
             var result2 = bs.Sort(example);
             watch.Stop();
             Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");*/
-
+            Random random = new Random();
+            int values = 10;
             int[] example = new int[]
             {
-                20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1
+                10,9,8,7,6,5,4,3,2,1
             };
+            /*for(int i = 0; i < values; i++)
+            {
+                example[i] = random.Next(1, values);
+            }*/
             QuickSort qs = new QuickSort();
             var result = qs.Sort(example);
+            BinarySearch bs = new BinarySearch();
+            var index = bs.SearchIndexOfValue(result, 8, 0, result.Length - 1);
             Console.ReadLine();
         }
     }
