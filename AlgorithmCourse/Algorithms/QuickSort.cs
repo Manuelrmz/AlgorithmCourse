@@ -31,7 +31,7 @@ namespace AlgorithmCourse.Algorithms
             while (start <= end)
             {
                 while (left >= 0 && a[left] < a[middle])
-                    left--;
+                    left++;
                 while (right >= 0 && a[right] > a[middle])
                     right--;
                 if(start <= end)

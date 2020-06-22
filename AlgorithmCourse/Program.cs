@@ -78,7 +78,7 @@ namespace AlgorithmCourse
             myQueue.PrintStack();
             System.Console.ReadLine();*/
 
-            /*int values = 100000;
+            int values = 100000;
             int[] example = new int[values];
             var watch = new System.Diagnostics.Stopwatch();
             Random random = new Random();
@@ -92,6 +92,7 @@ namespace AlgorithmCourse
             Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
             MergeSort ms = new MergeSort();
             BubbleSort bs = new BubbleSort();
+            QuickSort qs = new QuickSort();
             watch.Reset();
             watch.Start();
             var result = ms.Sort(example);
@@ -101,15 +102,34 @@ namespace AlgorithmCourse
             watch.Start();
             var result2 = bs.Sort(example);
             watch.Stop();
-            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");*/
-
-            int[] example = new int[]
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
+            /*int[] example = new int[]
             {
                 20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1
-            };
-            QuickSort qs = new QuickSort();
-            var result = qs.Sort(example);
-            Console.ReadLine();
+            };*/
+            watch.Reset();
+            example = new int[values];
+            for (int i = 0; i < values; i++)
+            {
+                example[i] = random.Next(1, values);
+            }
+            watch.Start();
+            var result3 = qs.Sort(example);
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
+            /*NodeTree<string> alphabet = new NodeTree<string>("A");
+            alphabet.left = new NodeTree<string>("B");
+            alphabet.right = new NodeTree<string>("C");
+            alphabet.left.left = new NodeTree<string>("D");
+            alphabet.left.right = new NodeTree<string>("E");
+            alphabet.right.left = new NodeTree<string>("F");
+            alphabet.right.right = new NodeTree<string>("G");
+            BFS bfs = new BFS();
+            DFS dfs = new DFS();
+            Console.WriteLine("BFS");
+            bfs.PrintTree<string>(alphabet);
+            Console.WriteLine("DFS");
+            dfs.PrintTree<string>(alphabet);
+            Console.ReadLine();*/
         }
     }
 }
