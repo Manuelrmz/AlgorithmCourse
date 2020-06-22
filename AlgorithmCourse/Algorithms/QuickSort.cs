@@ -26,14 +26,12 @@ namespace AlgorithmCourse.Algorithms
         private int Pivot(ref int[] a, int start, int end)
         {
             int middle = (end + start) / 2;
-            int left = start;
-            int right = end;
             while (start <= end)
             {
-                while (left >= 0 && a[left] < a[middle])
-                    left++;
-                while (right >= 0 && a[right] > a[middle])
-                    right--;
+                while (start >= 0 && a[start] < a[middle])
+                    start++;
+                while (end >= 0 && a[end] > a[middle])
+                    end--;
                 if(start <= end)
                 {
                     int temp = a[start];

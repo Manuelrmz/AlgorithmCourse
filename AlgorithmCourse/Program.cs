@@ -78,7 +78,7 @@ namespace AlgorithmCourse
             myQueue.PrintStack();
             System.Console.ReadLine();*/
 
-            int values = 100000;
+            int values = 10000000;
             int[] example = new int[values];
             var watch = new System.Diagnostics.Stopwatch();
             Random random = new Random();
@@ -98,11 +98,11 @@ namespace AlgorithmCourse
             var result = ms.Sort(example);
             watch.Stop();
             Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
-            watch.Reset();
-            watch.Start();
-            var result2 = bs.Sort(example);
-            watch.Stop();
-            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
+            //watch.Reset();
+            //watch.Start();
+            //var result2 = bs.Sort(example);
+            //watch.Stop();
+            //Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
             /*int[] example = new int[]
             {
                 20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1
@@ -128,8 +128,8 @@ namespace AlgorithmCourse
             Console.WriteLine("BFS");
             bfs.PrintTree<string>(alphabet);
             Console.WriteLine("DFS");
-            dfs.PrintTree<string>(alphabet);
-            Console.ReadLine();*/
+            dfs.PrintTree<string>(alphabet);*/
+            Console.ReadLine();
         }
     }
 }
